@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plantapp/constants.dart';
+import 'package:plantapp/screens/details/details_screen.dart';
 
 class FeaturedPlants extends StatelessWidget {
   const FeaturedPlants({
@@ -14,7 +15,14 @@ class FeaturedPlants extends StatelessWidget {
         children: [
           FeaturePlantCard(
             image: "assets/images/66266A.jpg",
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DetailsScreen(),
+                ),
+              );
+            },
           ),
           FeaturePlantCard(
             image: "assets/images/8_max.jpg",

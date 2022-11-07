@@ -3,7 +3,9 @@ import 'package:plantapp/constants.dart';
 
 class TitleWithMoreBtn extends StatelessWidget {
   const TitleWithMoreBtn({
-    Key? key, required this.title, required this.press,
+    Key? key,
+    required this.title,
+    required this.press,
   }) : super(key: key);
 
   final String title;
@@ -12,24 +14,26 @@ class TitleWithMoreBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       child: Row(
         children: <Widget>[
-           TitleWithCustomUnderline(text: title),
-           const Spacer(),
+          TitleWithCustomUnderline(text: title),
+          const Spacer(),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color.fromARGB(
                   255, 52, 103, 205), //background color of button
               side: const BorderSide(
-                  width: 3, color: Color.fromRGBO(158, 158, 158, 1)), //border width and color
+                  width: 3,
+                  color: Color.fromRGBO(
+                      158, 158, 158, 1)), //border width and color
               elevation: 3, //elevation of button
               shape: RoundedRectangleBorder(
                   //to set border radius to button
                   borderRadius: BorderRadius.circular(30)),
             ),
             onPressed: press,
-            child:  const Text('More'),
+            child: const Text('More'),
           ),
         ],
       ),
@@ -47,7 +51,7 @@ class TitleWithCustomUnderline extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 24,
       child: Stack(
         children: <Widget>[

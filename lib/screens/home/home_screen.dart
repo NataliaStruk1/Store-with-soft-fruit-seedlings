@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -7,14 +7,16 @@ import 'package:plantapp/constants.dart';
 import 'package:plantapp/screens/home/components/body.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({super.key, required this.user});
+
+  final User user;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: Body(),
-      bottomNavigationBar: MyBottomNavBar(),
+      body: const Body(),
+      bottomNavigationBar: const MyBottomNavBar(),
     );
   }
 
@@ -30,5 +32,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-

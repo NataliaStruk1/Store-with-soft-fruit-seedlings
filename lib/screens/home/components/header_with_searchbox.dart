@@ -70,7 +70,6 @@ class HeaderWithSearchBox extends StatelessWidget {
                 children: <Widget>[
                   Expanded(
                     child: TextField(
-                      onChanged: (newVale) {},
                       decoration: InputDecoration(
                         hintText: "Search",
                         hintStyle: TextStyle(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:plantapp/components/my_account_page/my_account_page.dart';
 import 'package:plantapp/constants.dart';
 
 class MyBottomNavBar extends StatelessWidget {
@@ -20,7 +21,7 @@ class MyBottomNavBar extends StatelessWidget {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            offset: Offset(0, -10),
+            offset: const Offset(0, -10),
             blurRadius: 35,
             color: kPrimaryColor.withOpacity(0.4),
           ),
@@ -38,7 +39,16 @@ class MyBottomNavBar extends StatelessWidget {
             icon: SvgPicture.asset("assets/icons/heart-svgrepo-com (2).svg"),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyAccountPageContent(
+                    email: 'Jakub',
+                  ),
+                ),
+              );
+            },
             icon: SvgPicture.asset("assets/icons/person-svgrepo-com (3).svg"),
           )
         ],

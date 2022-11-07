@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:plantapp/constants.dart';
 import 'package:plantapp/screens/home/components/featurred_plants.dart';
 import 'package:plantapp/screens/home/components/header_with_searchbox.dart';
 import 'package:plantapp/screens/home/components/recomend_plants.dart';
@@ -22,10 +20,9 @@ class Body extends StatelessWidget {
           ),
           const RecomendsPlants(),
           TitleWithMoreBtn(title: "Featured Plants", press: () {}),
-          FeaturedPlants(),
+          const FeaturedPlants(),
         ],
       ),
     );
   }
 }
-
